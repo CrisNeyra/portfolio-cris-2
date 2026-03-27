@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Portfolio de Cris</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header class="nav">
+			<nav>
+				<ul>
+					<li><a href="#inicio">Inicio</a></li>
+					<li><a href="#experiencia">Experiencia</a></li>
+					<li><a href="#conocimientos">Conocimientos</a></li>
+					<li><a href="#contacto">Contactame</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Botón WhatsApp fijo -->
+		<a class="whatsapp-btn" href="https://wa.me/5491168883430" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+			<svg viewBox="0 0 24 24" fill="currentColor">
+				<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+			</svg>
+		</a>
+
+		<!-- Logo fijo esquina inferior derecha -->
+		<a class="logo-fixed" href="#inicio" aria-label="Ir al inicio">
+			<span class="logo-mark" aria-hidden="false">
+				<img class="logo-signature" src="image/firmaDev.jpg" alt="Firma de Cris" />
+			</span>
+		</a>
+
+		<!-- Music Player Control -->
+		<div class="music-control">
+			<audio id="bg-music" loop>
+				<source src="Pura vidaInstrumental.mp3" type="audio/mpeg">
+			</audio>
+			<button id="music-toggle" class="music-btn" aria-label="Reproducir música" data-tooltip="🎵 Reproducir música">
+				<svg class="icon-sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<path d="M11 5L6 9H2v6h4l5 4V5z"/>
+					<path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+				</svg>
+				<svg class="icon-sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<path d="M11 5L6 9H2v6h4l5 4V5z"/>
+					<line x1="23" y1="9" x2="17" y2="15"/>
+					<line x1="17" y1="9" x2="23" y2="15"/>
+				</svg>
+			</button>
+			<div class="volume-slider-container">
+				<span class="volume-sign minus">−</span>
+				<input type="range" id="volume-slider" class="volume-slider" min="0" max="100" value="50">
+				<span class="volume-sign plus">+</span>
+			</div>
+			<div class="music-marquee">
+				<span class="music-marquee-text">Reproducir para una mejor experiencia</span>
+			</div>
+		</div>
+
+		<main>
+			<section
+				id="inicio"
+				class="panel is-visible"
+				style="--panel-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');"
+			>
+				<div class="content">
+					<h1>Hola! Soy Cristian. Gracias por visitarme!</h1>
+					<span class="eyebrow hero-eyebrow">Desarrollador Full Stack, con foco en frontend moderno, experiencia en mobile y exploración de inteligencia artificial.</span>
+					<p>
+						Creador multidisciplinario
+					</p>
+					<div class="cta">
+						<button class="btn btn-primary">Charlemos</button>
+						<button class="btn btn-secondary">Ver proyectos</button>
+					</div>
+				</div>
+				<div class="scroll-hint">
+					<div class="mouse"></div>
+					<small>Desliza para explorar</small>
+				</div>
+			</section>
+
+			<section
+				id="experiencia"
+				class="panel"
+				style="--panel-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80');"
+			>
+				<div class="content portfolio-content">
+					<span class="eyebrow">Mi Portfolio</span>
+					<h2>Proyectos que he desarrollado</h2>
+					<p>
+						Una selección de mis trabajos más recientes. Cada proyecto refleja mi pasión 
+						por crear experiencias digitales únicas y funcionales.
+					</p>
+					
+					<div class="portfolio-grid">
+						<!-- Proyecto 1 -->
+						<article class="portfolio-card">
+							<div class="portfolio-image">
+								<img src="assets/proyecto1.jpg" alt="crowforza pagina web" />
+								<div class="portfolio-overlay">
+									<div class="portfolio-links">
+										<a href="#" class="portfolio-link" target="_blank" rel="noopener" title="Ver Demo">
+											<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+												<polyline points="15 3 21 3 21 9"/>
+												<line x1="10" y1="14" x2="21" y2="3"/>
+											</svg>
+										</a>
+										<a href="https://crowforza-pagina-web.vercel.app/" class="portfolio-link" target="_blank" rel="noopener" title="Ver Código">
+											<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="portfolio-info">
+								<h3>crowforza pagina web</h3>
+								<p>Breve descripción del proyecto y las tecnologías utilizadas.</p>
+								<div class="portfolio-tags">
+									<span>HTML</span>
+									<span>CSS</span>
+									<span>JavaScript</span>
+								</div>
+							</div>
+						</article>
+
+						<!-- Proyecto 2 -->
+						<article class="portfolio-card">
+							<div class="portfolio-image">
+								<img src="assets/proyecto2.jpg" alt="Modo Zen" />
+								<div class="portfolio-overlay">
+									<div class="portfolio-links">
+										<a href="#" class="portfolio-link" target="_blank" rel="noopener" title="Ver Demo">
+											<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+												<polyline points="15 3 21 3 21 9"/>
+												<line x1="10" y1="14" x2="21" y2="3"/>
+											</svg>
+										</a>
+										<a href="#" class="portfolio-link" target="_blank" rel="noopener" title="Ver Código">
+											<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="portfolio-info">
+								<h3>Modo Zen</h3>
+								<p>Aplicación de meditación para mejorar el bienestar.</p>
+								<div class="portfolio-tags">
+									<span>JavaScript</span>
+									<span>HTML5</span>
+								</div>
+							</div>
+						</article>
+
+						<!-- Proyecto 3 -->
+						<article class="portfolio-card">
+							<div class="portfolio-image">
+								<img src="assets/proyecto3.jpg" alt="Nombre del Proyecto 3" />
+								<div class="portfolio-overlay">
+									<div class="portfolio-links">
+										<a href="#" class="portfolio-link" target="_blank" rel="noopener" title="Ver Demo">
+											<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+												<polyline points="15 3 21 3 21 9"/>
+												<line x1="10" y1="14" x2="21" y2="3"/>
+											</svg>
+										</a>
+										<a href="#" class="portfolio-link" target="_blank" rel="noopener" title="Ver Código">
+											<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="portfolio-info">
+								<h3>Negro el 26</h3>
+								<p>Beta de aplicación móvil para gestión de eventos.</p>
+								<div class="portfolio-tags">
+									<span>Android</span>
+									<span>Java</span>
+								</div>
+							</div>
+						</article>
+
+						</div>
+				</div>
+			</section>
+
+			<section
+				id="conocimientos"
+				class="panel"
+				style="--panel-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80');"
+			>
+				<div class="content skills-content">
+					<span class="eyebrow">Stack Técnico</span>
+					<h2>Mis conocimientos y herramientas.</h2>
+					<p>
+						Tecnologías que domino para crear experiencias digitales completas,
+						desde el frontend moderno hasta aplicaciones móviles y bases de datos.
+					</p>
+
+					<div class="skills-grid">
+						<!-- Frontend -->
+						<div class="skill-category">
+							<h3 class="category-title">Frontend</h3>
+							<div class="skill-cards">
+								<article class="skill-card skill-card--html">
+									<div class="skill-icon">
+										<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" />
+									</div>
+									<span class="skill-name">HTML5</span>
+								</article>
+								<article class="skill-card skill-card--css">
+									<div class="skill-icon">
+										<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" />
+									</div>
+									<span class="skill-name">CSS3</span>
+								</article>
+								<article class="skill-card skill-card--js">
+									<div class="skill-icon">
+										<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" />
+									</div>
+									<span class="skill-name">JavaScript</span>
+								</article>
+								<article class="skill-card skill-card--react">
+									<div class="skill-icon">
+										<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" />
+									</div>
+									<span class="skill-name">React</span>
+								</article>
+								<article class="skill-card skill-card--redux">
+									<div class="skill-icon">
+										<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg" alt="Redux" />
+									</div>
+									<span class="skill-name">Redux</span>
+								</article>
+								<article class="skill-card skill-card--bootstrap">
+									<div class="skill-icon">
+										<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" />
+									</div>
+									<span class="skill-name">Bootstrap</span>
+								</article>
+							</div>
+						</div>
+
+						<!-- Backend & Data -->
+						<div class="skill-category">
+							<h3 class="category-title">Backend & Data</h3>
+							<div class="skill-cards">
+								<article class="skill-card skill-card--java">
+									<div class="skill-icon">
+										<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" />
+									</div>
+									<span class="skill-name">Java</span>
+								</article>
+								<article class="skill-card skill-card--sql">
+									<div class="skill-icon">
+										<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" />
+									</div>
+									<span class="skill-name">SQL / MySQL</span>
+								</article>
+							</div>
+						</div>
+
+						<!-- Mobile & AI -->
+						<div class="skill-category">
+							<h3 class="category-title">Mobile & IA</h3>
+							<div class="skill-cards">
+								<article class="skill-card skill-card--android">
+									<div class="skill-icon">
+										<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" alt="Android" />
+									</div>
+									<span class="skill-name">Android</span>
+								</article>
+								<article class="skill-card skill-card--ai">
+									<div class="skill-icon">
+										<svg viewBox="0 0 24 24" fill="currentColor">
+											<path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073zM13.26 22.43a4.476 4.476 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 0 0 .392-.681v-6.737l2.02 1.168a.071.071 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494zM3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085 4.783 2.759a.771.771 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646zM2.34 7.896a4.485 4.485 0 0 1 2.366-1.973V11.6a.766.766 0 0 0 .388.676l5.815 3.355-2.02 1.168a.076.076 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 7.896zm16.597 3.855l-5.833-3.387L15.119 7.2a.076.076 0 0 1 .071 0l4.83 2.791a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.407-.667zm2.01-3.023l-.141-.085-4.774-2.782a.776.776 0 0 0-.785 0L9.409 9.23V6.897a.066.066 0 0 1 .028-.061l4.83-2.787a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135l-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08-4.778 2.758a.795.795 0 0 0-.393.681zm1.097-2.365l2.602-1.5 2.607 1.5v2.999l-2.597 1.5-2.607-1.5z"/>
+										</svg>
+									</div>
+									<span class="skill-name">IA / Prompting</span>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section
+				id="contacto"
+				class="panel"
+				style="--panel-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80');"
+			>
+				<div class="content">
+					<span class="eyebrow">Abramos la conversación</span>
+					<h2>Juntos, celebremos la próxima experiencia.</h2>
+					<p>
+						Disponible para colaboraciones, consultorías o liderar equipos creativos.
+						Respondo en menos de 24 horas.
+					</p>
+					<div class="contact">
+						<div>
+							<h3>+54 9 11 6888 3430</h3>
+							<p>crisneyra13@gmail.com</p>
+							<a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">https://www.linkedin.com/in/crissneyra/</a>
+							<br />
+							<a href="https://www.behance.net/" target="_blank" rel="noreferrer">https://github.com/CrisNeyra</a>
+						</div>
+						<form class="form">
+							<input type="text" placeholder="Nombre" required />
+							<input type="email" placeholder="Email" required />
+							<textarea rows="4" placeholder="¿En qué podemos trabajar?" required></textarea>
+							<button class="btn btn-primary" type="submit">Enviar</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<script src="script.js" defer></script>
+	</body>
+</html>

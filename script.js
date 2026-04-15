@@ -5,7 +5,10 @@ const observer = new IntersectionObserver(
 		});
 	},
 	{
-		threshold: 0.6,
+		// Umbral alto (p. ej. 0.6) con paneles más altos que el viewport puede dejar
+		// el panel sin "is-visible" y el contenido queda en opacity: 0 (pantalla en blanco).
+		threshold: 0.2,
+		rootMargin: "0px 0px -8% 0px",
 	}
 );
 
@@ -21,7 +24,7 @@ const musicDialog = document.getElementById("music-dialog");
 let isPlaying = false;
 let dialogTimeout;
 
-if (bgMusic) {
+if (bgMusic && musicToggle && volumeSlider && musicControl) {
 	bgMusic.volume = 0.5;
 	volumeSlider.value = 50;
 
